@@ -13,7 +13,7 @@
     }
 
     get initialTime() {
-      return parseInt(this.options.t) * 60
+      return parseFloat(this.options.t) * 60
     }
 
     get options() {
