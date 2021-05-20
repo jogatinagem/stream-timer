@@ -44,6 +44,7 @@
 
       if (this.remainingTime <= 0) {
         this.remainingTime = 0
+        this.pulse()
         clearInterval(this.interval)
       }
     }
@@ -62,5 +63,12 @@
     }
 
     parseColor = color => color.match(/^[0-9a-f]{6}$/i) ? `#${color}` : color
+
+    pulse() {
+      this.outputTarget.classList.add('opacity-50')
+      setTimeout(_ => {
+        this.outputTarget.classList.add('animate-flash')
+      }, 300)
+    }
   })
 })()
