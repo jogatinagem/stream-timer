@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Timer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=block" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="timer.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="flex h-screen w-screen justify-center">
+    <article class="self-center" data-controller="timer">
+      <p class="text-2xl text-center" data-timer-target="title">Live começa em</p>
+      <p class="text-9xl text-center" data-timer-target="output"></p>
+    </article>
+  </section>
+
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>
