@@ -6,6 +6,12 @@
       return ['output', 'title']
     }
 
+    defaultOptions = {
+      t: 10,
+      c: 'black',
+      tc: 'black'
+    }
+
     get initialTime() {
       return parseInt(this.options.t) * 60
     }
@@ -14,7 +20,7 @@
       if (this._options) return this._options
 
       const params = new URLSearchParams(window.location.search)
-      let options = {}
+      let options = { ...this.defaultOptions }
       for (const [key, value] of params) {
         options[key] = value
       }
